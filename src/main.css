@@ -1,3 +1,8 @@
+:root {
+  --slate-300: #cbd5e1;
+  --slate-700: #334155;
+  --blue-700: #1d4ed8;
+}
 * {
   box-sizing: border-box;
   padding: 0;
@@ -18,13 +23,27 @@ body {
   display: flex;
   justify-content: space-between;
   margin: 1.7rem;
-  font-size: 1.3rem;
-  color: #4b658a;
-  font-weight: 600;
+  border-bottom: 1px solid #cfcfd4;
 }
-.filter-item{
+.filter-item {
+  display: block;
   cursor: pointer;
 }
+.filter-item button{
+  padding: 2rem;
+  color: #4b658a;
+  font-weight: 600;
+  font-size: 1.3rem;
+  outline: none;
+  border: 0;
+}
+
+button[class="active"]{
+  transition: all 0.3s ease-in-out;
+  color: var(--blue-700);
+  border-bottom: 1px solid #15165e;
+}
+
 .badge {
   white-space: nowrap;
   padding: 0.3rem 0.5rem;
@@ -52,7 +71,7 @@ body {
   font-weight: 600;
 }
 
-footer{
+footer {
   text-align: center;
   color: #4b658aa9;
   margin-bottom: 2rem;
